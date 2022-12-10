@@ -8,13 +8,13 @@ function handleSubmit(event) {
     elements: { email, password }
   } = event.currentTarget;
 
+  const userList = { email: email.value, password: password.value };
+
     if (email.value === "" || password.value === "") {
         alert('Заполните, пожалуйста, все поля !!!');
     return;
   }
-
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
-  
+  console.log(userList);
   event.currentTarget.reset();
 }
 

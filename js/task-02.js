@@ -9,11 +9,12 @@ const ingredients = [
 
 const ingredientRef = document.querySelector('#ingredients');
 
-ingredients.forEach(ingredient => {
+const newArrayLi = ingredients.map(ingredient => {
   const linkRef = document.createElement('li');
   linkRef.classList.add('item');
   linkRef.textContent = `${ingredient}`;
-  ingredientRef.appendChild(linkRef);
-
+  return linkRef;
 })
+
+  ingredientRef.append(...newArrayLi);
 
